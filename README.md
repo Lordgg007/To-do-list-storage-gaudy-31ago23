@@ -2,7 +2,8 @@
 
 > One paragraph statement about the project.
 
-![ari](https://github.com/Lordgg007/template-readme/assets/139135651/ca215d60-383a-48dc-9581-f5310ee7f69b)
+![todo](https://github.com/Lordgg007/To-do-list-storage-gaudy-31ago23/assets/139135651/aa4a6212-e723-4bf8-927c-90eb53c3d9d3)
+
 
 
 Additional description about the project and its features.
@@ -59,7 +60,7 @@ To get a local copy up and running follow these simple example steps.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](https://github.com/Lordgg007/To-do-list-storage-gaudy-31ago23/issues).
 
 ## Show your support
 
