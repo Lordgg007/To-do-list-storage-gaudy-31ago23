@@ -59,7 +59,7 @@ To get a local copy up and running follow these simple example steps.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Lordgg007/To-do-list-storage-gaudy-31ago23/issues).
+Feel free to check the [issues page](issues/).
 
 ## Show your support
 
