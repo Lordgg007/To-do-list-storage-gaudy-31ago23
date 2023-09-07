@@ -1,6 +1,6 @@
 :root {
-  --main-color: #0b8ff0;
-  --poppin-font: 'Poppins', 'sans-serif';
+  --main-color: #0b87ff;
+  --poppin-font: 'Poppins', sans-serif;
   --box-shadow-properties: 0 1.25em 1.8em rgba(1, 24, 48, 0.15);
   --border-bottom-properties: 2px solid #d1d3d4;
 }
@@ -12,14 +12,16 @@
 }
 
 body {
-  background-color: #0b87ff;
+  background-color: var(--main-color)
 }
+
+
 
 .container {
   width: 90%;
   max-width: 34em;
   position: absolute;
-  transform: translate(-50%, 50%);
+  transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
 }
@@ -29,17 +31,17 @@ body {
   background-color: white;
   padding: 1.8em 1.25em;
   border-radius: 0.3em;
-  box-shadow: 0 1.25em 1.8em rgba(1, 24, 48, 0.15);
+  box-shadow: var(--box-shadow-properties);
   display: grid;
-  grid-template-columns: 9fr 3fr; 
+  grid-template-columns: 9fr 3fr;
   gap: 1em;
 }
 
 #new-task input {
-  font-family: 'Poppin', 'sans-serif';
+  font-family: 'Poppins', sans-serif;
   font-size: 1em;
-  border:none;
-  border-bottom: 2px solid #d1d3d4;
+  border: none;
+  border-bottom: var(--border-bottom-properties);
   padding: 0.8em 0.5em;
   color: #111;
   font-weight: 500;
@@ -47,7 +49,7 @@ body {
 
 #new-task input:focus {
   outline: none;
-  background-color: #0b87ff;
+  background-color: var(--main-color)
 }
 
 #new-task button {
@@ -62,14 +64,14 @@ body {
   cursor: pointer;
 }
 
-#task {
-	background-color: white;
-	position: relative;
-	padding: 1.8em 1.25em;
-	margin-top: 3.8em;
-	width: 100%;
-	box-shadow: var(--box-shadow-properties);
-	border-radius: 0.6em;
+#tasks {
+  background-color: white;
+  position: relative;
+  padding: 1.8em 1.25em;
+  margin-top: 3.8em;
+  width: 100%;
+  box-shadow: var(--box-shadow-properties);
+  border-radius: 0.6em;
 }
 
 .task {
@@ -84,7 +86,7 @@ body {
 
 .task span {
   font-family: var(--poppin-font);
-  font-style: 9em;
+  font-size: 9em;
 }
 
 .task button {
@@ -98,21 +100,15 @@ body {
 }
 
 .delete {
-    background-color: #fb3b3b;
+  background-color: #fb3b3b;
 }
 
 .edit {
-    background-color: var(--main-color);
-    margin-left: auto;
-    margin-right: 3em;
+  background-color: var(--main-color);
+  margin-left: auto;
+  margin-right: 3em;
 }
 
 .complete {
-    text-decoration: line-through;
-}
-
-#new-task input {
-    font-family: var(--poppin-font);
-    font-size: 1em;
-    border: var(--border-bottom-properties) ;
+  text-decoration: line-through;
 }

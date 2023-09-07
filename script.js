@@ -1,62 +1,70 @@
-//Initial References 
+//Initial References
 const newTaskInput = document.querySelector("#new-task input");
-const taskDiv = document.querySelector("#task");
-let dleteTask = editTask, task;
+const taskDiv = document.querySelector("#tasks");
+let deleteTasks = editTasks, tasks;
 let updateNote = "";
-let count ;
+let count;
 
-//function on window load
-
+//Function on window load
 window.onload = () => {
   updateNote = "";
   count = Object.keys(localStorage).length;
-  displayTask();
+  displayTasks();
 }
 
-//function to display The Task
-
-const displayTask = () => {
+//Function to Display The Tasks
+const displayTasks = () => {
   if (Object.keys(localStorage).length > 0) {
-      taskDiv.computedStyleMap.display = "inline-block";
+    taskDiv.style.display = "inline-block";
   } else {
-      taskDiv.computedStyleMap.dsplay = "none";
+    taskDiv.style.display = "none";
   }
 
-  //clear task
+  //Clear the tasks
   taskDiv.innerHTML = "";
 
-  //Fetch all The Keys in local storage
-  let task = Object.keys(localStorage);
-  task = task.sort();
-    
-  for (let key of task) {
+  //Fetch All The  Keys in local storage
+  let tasks = Object.keys(localStorage);
+  tasks = tasks.sort();
+
+  for (let key of tasks) {
     let classValue = "";
 
-    //get all values 
-      let value = localStorage.getItem(key);
-      let taskInnerDiv = document.createElement("div");
-      taskInnerDiv.classList.add("task");
-      taskInnerDiv.setAttribute("id", key);
-      taskInnerDiv.innerHTML = `<span id ="taskname">${key.split("_")(1)}</span>`
-        
+    //Get all values
+    let value = localStorage.getItem(key);
+    let taskInnerDiv = document.createElement("div");
+    taskInnerDiv.classList.add("task");
+    taskInnerDiv.setAttribute("id", key);
+    taskInnerDiv.innerHTML = `<span id="taskname">${key.split("_")[1]}</span>`;
 
-      //LocalStorage would store boolean as string so we parse it to boolean back 
-      let editButton = document.createElement("button");
-			editButton.classList.add()
+    //localStorage would store boolean as string so we parse it to boolean back
+    let editButton = document.createElement("button");
+    editButton.classList.add("edit");
+    editButton.innerHTML = `<ion-icon name="create"></ion-icon>`;
+    if(!JSON.parse(value)) {
+      editButton.style.visibility = "visible";
+    } else {
+      editButton.style.visibility = "hidden";
+      taskInnerDiv.classList.add("completed");
     }
+    taskInnerDiv.appendChild(editButton);
+    taskInnerDiv.innerHTML += '<button class="delete"><ion-icon name="trash"></ion-icon></button>';
+    taskDiv.appendChild(taskInnerDiv);
+  }
 
-    //task completed
-    task = document.querySelectorAll(".task");
-    task.forEach((element, index) => {
-      element.onclick = () => {
-        //local storage update
-        if (element.classList.contains("completed")) {
-          updatestorage(element.id.split("_")[0], element.innerText, false);
-        } else {
-          updatestorage(element.id.split("_")[0], element.innerText, true);
-        }
+  //tasks completed
+  tasks = document.querySelectorAll(".task");
+  tasks.forEach((element, index) => {
+    element.onclick = () => {
+      //localstorage update
+      if (element.classList.contains("completed")) {
+        updateStorage(element.id.split("_")[0], element.innerText, false);
+      } else {
+        updateStorage(element.id.split("_")[0], element.innerText, true);
       }
-    })
+    };
+  });
 
-    
+  //Edit Tasks
+  editTasks = document.getElementsByClassName("edit");
 }
