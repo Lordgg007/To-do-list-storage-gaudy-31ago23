@@ -9,13 +9,13 @@ Additional description about the project and its features.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- JavaScript
+- CSS
+- HTML
 
 ## Live Demo
 
-
+click [here](https://lordgg007.github.io/To-do-list-storage-gaudy-31ago23/)
 
 
 ## Getting Started
@@ -47,19 +47,11 @@ To get a local copy up and running follow these simple example steps.
 - github: [@Lordgg007](https://github.com/Lordgg007)
 - Linkedin: [@Gaudy](https://www.linkedin.com/home)
 
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/linkedinhandle)
-
-
-
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](https://github.com/Lordgg007/To-do-list-storage-gaudy-31ago23/issues).
 
 ## Show your support
 
